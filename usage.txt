@@ -1,0 +1,9 @@
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+
+// TODO this is being destroyed too early (While still attached!).
+new SimpleEula(this, R.drawable.ic_launcher, R.string.app_name, R.raw.eula2, R.string.accept, R.string.do_not_accept, SimpleEula.MIME_HTML).show();
+
+...
+}
